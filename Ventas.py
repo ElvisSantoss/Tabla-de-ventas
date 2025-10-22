@@ -9,7 +9,8 @@ df = pd.DataFrame(datos)
 
 html_tabla = df.to_html(index=False) 
 
-estadisticas = df.describe().to_html() 
+estadisticas = df.describe().to_html()
+ 
 plt.bar(df['Producto'], df['Ventas']) 
 plt.title('Ventas por Producto') 
 plt.xlabel('Producto') 
@@ -18,4 +19,10 @@ plt.xticks(rotation=30)
 plt.tight_layout() 
 plt.savefig("grafica_ventas.png") 
 plt.close() 
-html = f""
+html = f"""
+Grafica de vemtas
+"""
+
+with open("tabla.html", "w", encoding="utf-8") as f:
+    f.write(html) 
+print(" Archivo 'tabla.html' creado ")

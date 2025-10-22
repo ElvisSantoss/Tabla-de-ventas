@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de Ventas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 40px;
+        }
+        h2 {
+            color: #333;
+        }
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin-bottom: 30px;
+        }
+        th, td {
+            border: 1px solid #999;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #ddd;
+        }
+        img {
+            max-width: 600px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tabla de Ventas</h2>
+    <!-- Aquí se insertará la tabla generada por pandas -->
+    {{ html_tabla }}
+
+    <h2>Estadísticas Descriptivas</h2>
+    <!-- Aquí se insertarán las estadísticas generadas por pandas -->
+    {{ estadisticas }}
+
+    <h2>Gráfica de Ventas</h2>
+    <!-- Imagen generada por matplotlib -->
+    <img src="grafica_ventas.png" alt="Gráfica de Ventas">
+</body>
+</html>
