@@ -1,47 +1,96 @@
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Reporte de Ventas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 40px;
-        }
-        h2 {
-            color: #333;
-        }
-        table {
-            border-collapse: collapse;
-            width: 60%;
-            margin-bottom: 30px;
-        }
-        th, td {
-            border: 1px solid #999;
-            padding: 8px;
-            text-align: center;
-        }
-        th {
-            background-color: #ddd;
-        }
-        img {
-            max-width: 600px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-        }
-    </style>
-</head>
-<body>
-    <h2>Tabla de Ventas</h2>
-    <!-- Aquí se insertará la tabla generada por pandas -->
-    {{ html_tabla }}
 
-    <h2>Estadísticas Descriptivas</h2>
-    <!-- Aquí se insertarán las estadísticas generadas por pandas -->
-    {{ estadisticas }}
+Datos de Ventas
 
-    <h2>Gráfica de Ventas</h2>
-    <!-- Imagen generada por matplotlib -->
-    <img src="grafica_ventas.png" alt="Gráfica de Ventas">
-</body>
-</html>
+Tabla de Datos:
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Producto</th>
+      <th>Ventas</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Televisor</td>
+      <td>150</td>
+      <td>750</td>
+    </tr>
+    <tr>
+      <td>Celular</td>
+      <td>200</td>
+      <td>650</td>
+    </tr>
+    <tr>
+      <td>Laptop</td>
+      <td>250</td>
+      <td>900</td>
+    </tr>
+    <tr>
+      <td>Tablet</td>
+      <td>300</td>
+      <td>400</td>
+    </tr>
+    <tr>
+      <td>Audífonos</td>
+      <td>100</td>
+      <td>120</td>
+    </tr>
+  </tbody>
+</table>
+
+Estadísticas Descriptivas:
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Ventas</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>5.000000</td>
+      <td>5.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>200.000000</td>
+      <td>564.000000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>79.056942</td>
+      <td>307.782391</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>100.000000</td>
+      <td>120.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>150.000000</td>
+      <td>400.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>200.000000</td>
+      <td>650.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>250.000000</td>
+      <td>750.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>300.000000</td>
+      <td>900.000000</td>
+    </tr>
+  </tbody>
+</table>
+
+Gráfica de Ventas:
+<img src="grafica_ventas.png" alt="Gráfica de Ventas">
