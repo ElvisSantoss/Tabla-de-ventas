@@ -1,0 +1,24 @@
+body{
+    background-color: #cde4ab;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+
+color: #000000;
+background-color: #a2dddd;
+}
+
+text{
+
+    left: center;
+    background-color: red;
+
+}
+
+
+img {
+color: cyan;
+background-color: green;
+width: 1080px;
+}
